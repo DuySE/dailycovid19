@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Input search */
+.search input {
+  border-radius: 3px;
+  color: #484848;
+  background: url('/images/light-search-icon.svg');
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 20px 20px;
+  padding-left: 2.8em;
+  width: 30%;
+  height: 45px;
+  background-color: #f8f8f8;
+  border: 0;
+  font-size: medium;
+  box-shadow: 1px 1px 1px #f8f8f8;
+  margin-bottom: 2em;
+}
+
+.search input:focus {
+  outline: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Suggestions section */
+.options {
+  width: 30%;
+  min-height: 200px;
+  max-height: 200px;
+  margin: auto;
+  top: 55%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  font-size: 14px;
+  overflow-y: auto;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: absolute;
+}
+
+.options div {
+  padding: 0.8em;
+  min-height: 20px;
+  text-align: left;
+  outline: 0;
+}
+
+.options div:hover {
+  cursor: pointer;
+}
+
+.option-active,
+.option-active:active,
+.option-active:hover {
+  background-color: #e8e8e9;
+  color: black;
+}
+
+.options li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  .search input, .options {
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .options {
+    top: 14%;
+    z-index: 1;
+  }
+}
