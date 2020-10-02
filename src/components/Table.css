@@ -21,7 +21,13 @@ table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  color: black;
+	color: black;
+	background-color: #b8b8b8;
+}
+
+#country th {
+	position: sticky;
+	top: 0;
 }
 
 @media 
